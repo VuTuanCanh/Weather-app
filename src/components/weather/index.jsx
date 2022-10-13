@@ -1,10 +1,16 @@
 import React from 'react'
+import FormInput from '../FormInput';
+import WeatherInfo from '../WeatherInfo';
 import './style.scss';
 
 function Weather() {
     return (
-        <h1>Weather</h1>
+        <div className="weather">
+            <h1>Weather</h1>
+            <FormInput />
+            <WeatherInfo />
+        </div>
     )
 }
 
-export default Weather
+export default Weather;

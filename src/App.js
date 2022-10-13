@@ -1,12 +1,13 @@
+import { Route, Routes } from 'react-router-dom';
 import './App.css';
-import FormInput from './components/formInput';
-import Weather from './components/weather';
+import Weather from './components/Weather';
 
 function App() {
   return (
     <div className="App">
-      <FormInput />
-      <Weather />
+      <Routes>
+        <Route path='/' element={<Weather />}></Route>
+      </Routes>
     </div>
   );
 }
