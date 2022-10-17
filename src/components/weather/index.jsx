@@ -1,6 +1,6 @@
 import React from 'react'
 import FormInput from '../FormInput';
-import WeatherInfo from '../WeatherInfo';
+import DetailWeather from '../DetailWeather';
 import './style.scss';
 
 function Weather() {
@@ -8,9 +8,12 @@ function Weather() {
         <div className="weather">
             <h1>Weather</h1>
             <FormInput />
-            <WeatherInfo />
+            <DetailWeather />
         </div>
     )
 }
 
 export default Weather;
+
+
+// api thời tiết: http://api.openweathermap.org/data/2.5/weather?q=[Địa điểm]&appid=5fcbd4eafaa1546ebceedc9b60c37abc
