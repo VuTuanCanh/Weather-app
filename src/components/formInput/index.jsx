@@ -1,28 +1,26 @@
 import React, { useState } from 'react'
-import removeVietnameseTones from '../Convert/convertStringVn';
+import removeVietnameseTones from '../../features/Convert/convertStringVn';
 import './style.scss';
 
 
-function FormInput() {
-    const [city, setCity] = useState('')
+function FormInput(props) {
+    const { submited } = props;
+
+    const [value, setValue] = useState('')
 
 
-    const handleInput = (e) => {
-        setCity(e);
-    }
 
     const handleBtnSubmit = (e) => {
         e.preventDefault();
-        console.log(removeVietnameseTones(city));
+        submited(removeVietnameseTones(value));
     }
-    console.log(city);
 
     return (
         <form action="">
             <input
                 type="text"
-                value={city}
-                onChange={(e) => handleInput(e.target.value)}
+                value={value}
+                onChange={(e) => setValue(e.target.value)}
             />
             <button
                 onClick={(e) => handleBtnSubmit(e)}

@@ -1,5 +1,4 @@
 import React from 'react'
-import FormInput from '../FormInput';
 import DetailWeather from '../DetailWeather';
 import './style.scss';
 
@@ -7,7 +6,6 @@ function Weather() {
     return (
         <div className="weather">
             <h1>Weather</h1>
-            <FormInput />
             <DetailWeather />
         </div>
     )
