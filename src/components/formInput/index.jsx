@@ -1,5 +1,5 @@
 import React, { useState } from 'react'
-import removeVietnameseTones from '../../features/Convert/convertStringVn';
+import removeVietnameseTones from '../../features/convertStringVn';
 import './style.scss';
 
 
