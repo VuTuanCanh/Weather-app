@@ -5,7 +5,8 @@ import FormInputCity from '../FormInputCity';
 import getDateTime from "../../features/dateTime";
 
 
-function DetailWeather() {
+function DetailWeather(props) {
+    const { onTemp } = props;
     const [city, setCity] = useState('hanoi')
 
     const [dataList, setDataList] = useState({
@@ -15,7 +16,6 @@ function DetailWeather() {
         main: '',
         description: '',
     });
-
 
     const OnSubmit = (text) => {
         setCity(text);
@@ -27,6 +27,7 @@ function DetailWeather() {
             try {
                 const response = await axios.get(`https://api.openweathermap.org/data/2.5/weather?q=${city}&units=metric&appid=5fcbd4eafaa1546ebceedc9b60c37abc`);
                 const data = response.data;
+                onTemp(data);
                 setDataList(() => {
                     return {
                         name: data.name,
@@ -49,15 +50,18 @@ function DetailWeather() {
 
     return (
         <div className="detail-weather">
-            <div className="form-input">
+            <div>
                 <FormInputCity submited={OnSubmit} />
             </div>
             <div className="detail">
-                <h1>{dataList.name}, {dataList.country}</h1>
-                <p>{dataList.date}</p>
-                <h2>{dataList.temp} &#176;C</h2>
-                <h2>{dataList.main}</h2>
-                <h3>detail: {dataList.description}</h3>
+                <h1 className="city">{dataList.name}, {dataList.country}</h1>
+                <p className="date">{dataList.date}</p>
+                <h2 className="temp">{Math.round(dataList.temp)} &#176;C</h2>
+                <h2 className="main">{dataList.main}</h2>
+                <h3 className="desc">({dataList.description})</h3>
+            </div>
+            <div className="more">
+
             </div>
 
         </div>

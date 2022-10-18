@@ -21,6 +21,7 @@ function FormInput(props) {
                 type="text"
                 value={value}
                 onChange={(e) => setValue(e.target.value)}
+                placeholder='Search'
             />
             <button
                 onClick={(e) => handleBtnSubmit(e)}
