@@ -14,4 +14,4 @@ function Weather() {
 export default Weather;
 
 
-// api thời tiết: http://api.openweathermap.org/data/2.5/weather?q=[Địa điểm]&appid=5fcbd4eafaa1546ebceedc9b60c37abc
+// api thời tiết: http://api.openweathermap.org/data/2.5/weather?q=[bỏ ngoặc và điền tên thành phố]&units=metric&appid=5fcbd4eafaa1546ebceedc9b60c37abc
