@@ -38,7 +38,7 @@ function DetailWeather() {
                     }
                 });
             } catch (error) {
-                alert(error.message);
+                alert('Location Not Found');
             }
         }
         getWeatherApi();
