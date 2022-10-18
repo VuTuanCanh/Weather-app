@@ -1,7 +1,7 @@
 import axios from "axios";
 import React, { useEffect, useState } from 'react';
 import './style.scss';
-import FormInput from '../FormInput';
+import FormInputCity from '../FormInputCity';
 import getDateTime from "../../features/dateTime";
 
 
@@ -50,7 +50,7 @@ function DetailWeather() {
     return (
         <div className="detail-weather">
             <div className="form-input">
-                <FormInput submited={OnSubmit} />
+                <FormInputCity submited={OnSubmit} />
             </div>
             <div className="detail">
                 <h1>{dataList.name}, {dataList.country}</h1>

@@ -2,7 +2,7 @@ import React from 'react';
 import DetailWeather from '../DetailWeather';
 import './style.scss';
 
-function Weather() {
+function WeatherCity() {
     return (
         <div className="weather">
             <h1>Weather</h1>
@@ -11,4 +11,4 @@ function Weather() {
     )
 }
 
-export default Weather;
+export default WeatherCity;
