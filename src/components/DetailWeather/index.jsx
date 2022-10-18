@@ -25,7 +25,7 @@ function DetailWeather() {
     useEffect(() => {
         async function getWeatherApi() {
             try {
-                const response = await axios.get(`http://api.openweathermap.org/data/2.5/weather?q=${city}&units=metric&appid=5fcbd4eafaa1546ebceedc9b60c37abc`);
+                const response = await axios.get(`https://api.openweathermap.org/data/2.5/weather?q=${city}&units=metric&appid=5fcbd4eafaa1546ebceedc9b60c37abc`);
                 const data = response.data;
                 setDataList(() => {
                     return {
