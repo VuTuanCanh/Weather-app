@@ -1,3 +1,15 @@
-h1 {
-    color: green;
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.weather {
+    background-image: url(../../assets/warm.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: 100% 100%;
+    display: flex;
+    text-align: center;
+    height: 100vh;
 }

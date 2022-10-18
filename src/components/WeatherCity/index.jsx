@@ -5,7 +5,6 @@ import './style.scss';
 function WeatherCity() {
     return (
         <div className="weather">
-            <h1>Weather</h1>
             <DetailWeather />
         </div>
     )
