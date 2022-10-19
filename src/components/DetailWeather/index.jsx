@@ -36,7 +36,7 @@ function DetailWeather(props) {
                         main: data.weather[0].main,
                         description: data.weather[0].description,
                         humidity: data.main.humidity,
-                        wind: data.wind.speed,
+                        windSpeed: data.wind.speed,
                     }
                 });
                 onTemp(data);
@@ -63,7 +63,7 @@ function DetailWeather(props) {
                 <h3 className="desc">({dataList.description})</h3>
                 <div className="more">
                     <p className="humidity">humidity: {dataList.humidity}&#37;</p>
-                    <p className="wind">wind: {dataList.wind} (m/s)</p>
+                    <p className="wind">wind: {dataList.windSpeed} (m/s)</p>
                 </div>
             </div>
         </div>
