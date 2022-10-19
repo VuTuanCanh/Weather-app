@@ -41,7 +41,7 @@ function DetailWeather(props) {
                 });
                 onTemp(data);
             } catch (error) {
-                alert('Location Not Found');
+                alert('No data found at this location!!!\nPlease change location.');
             }
         }
         getWeatherApi();
@@ -62,8 +62,8 @@ function DetailWeather(props) {
                 <h2 className="main">{dataList.main}</h2>
                 <h3 className="desc">({dataList.description})</h3>
                 <div className="more">
-                    <p className="humidity">humidity: {dataList.humidity}&#37;</p>
-                    <p className="wind">wind: {dataList.windSpeed} (m/s)</p>
+                    <p className="humidity">humidity: {dataList.humidity}%</p>
+                    <p className="wind">wind speed: {dataList.windSpeed} (m/s)</p>
                 </div>
             </div>
         </div>

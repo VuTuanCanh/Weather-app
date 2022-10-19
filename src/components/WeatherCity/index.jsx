@@ -12,8 +12,8 @@ function WeatherCity() {
 
     return (
         <div className={classNames('weather', {
-            warm: temp > 15 && temp < 20 ? 'warm' : false,
-            hot: temp > 30 ? 'hot' : false,
+            warm: temp >= 15 && temp <= 20 ? 'warm' : false,
+            hot: temp >= 30 ? 'hot' : false,
             cool: temp > 20 && temp < 29 ? 'cool' : false,
             cold: temp < 15 ? 'cold' : false,
         })}>
