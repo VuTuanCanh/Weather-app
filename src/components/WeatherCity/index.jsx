@@ -9,7 +9,6 @@ function WeatherCity() {
     const Temp = (data) => {
         setTemp(data.main.temp);
     }
-    console.log(temp);
 
     return (
         <div className={classNames('weather', {

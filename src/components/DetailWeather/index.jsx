@@ -27,7 +27,6 @@ function DetailWeather(props) {
             try {
                 const response = await axios.get(`https://api.openweathermap.org/data/2.5/weather?q=${city}&units=metric&appid=5fcbd4eafaa1546ebceedc9b60c37abc`);
                 const data = response.data;
-                onTemp(data);
                 setDataList(() => {
                     return {
                         name: data.name,
@@ -36,8 +35,11 @@ function DetailWeather(props) {
                         temp: data.main.temp,
                         main: data.weather[0].main,
                         description: data.weather[0].description,
+                        humidity: data.main.humidity,
+                        wind: data.wind.speed,
                     }
                 });
+                onTemp(data);
             } catch (error) {
                 alert('Location Not Found');
             }
@@ -59,11 +61,11 @@ function DetailWeather(props) {
                 <h2 className="temp">{Math.round(dataList.temp)} &#176;C</h2>
                 <h2 className="main">{dataList.main}</h2>
                 <h3 className="desc">({dataList.description})</h3>
+                <div className="more">
+                    <p className="humidity">humidity: {dataList.humidity}&#37;</p>
+                    <p className="wind">wind: {dataList.wind} (m/s)</p>
+                </div>
             </div>
-            <div className="more">
-
-            </div>
-
         </div>
     )
 }
